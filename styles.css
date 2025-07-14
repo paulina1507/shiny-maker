@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  perspective: 1px; /* da efecto profundidad */
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Fondo general */
+.background {
+  background-image: url('background.jpg');
+  z-index: 1;
+}
+
+/* Capa Matrix semitransparente */
+.matrix {
+  background-image: url('backgroundmatrix.jpg');
+  opacity: 0.2;
+  z-index: 2;
+}
+
+/* Nubes */
+.clouds {
+  background-image: url('nubes.png');
+  z-index: 3;
+}
+
+/* Edificios */
+.buildings {
+  background-image: url('edificios.png');
+  z-index: 4;
+}
+
+/* Gato */
+.cat {
+  background-image: url('gatoensuelo.png');
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Texto */
+.content {
+  position: relative;
+  z-index: 6;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00;
+}

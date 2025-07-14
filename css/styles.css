@@ -143,8 +143,8 @@ p {
   background-position: center;
   color: var(--blanco);
   text-align: left;
-  padding: 12vh 8vw 12vh; /* más altura y más margen horizontal */
-  min-height: 90vh;        /* altura visual grande de pantalla */
+  padding: 50px 70px;
+  min-height: 300px;    /* altura visual grande de pantalla */
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* alinea el contenido arriba */
@@ -180,12 +180,12 @@ p {
   border-right: 3px solid var(--blanco);
   white-space: nowrap;
   letter-spacing: 2px;
-  font-size: 3.9rem;
+  font-size: 50px;
   max-width: 100%;
   width: fit-content;
   color: var(--blanco);
   text-align: center;
-  margin: 10rem auto;
+  margin: 60px auto;
   animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
 }
 

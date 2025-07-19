@@ -3,181 +3,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shiny Maker</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <title>Shiny Maker – Soluciones Web y Móviles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/styles.css" />
+  <script src="/js/main.js" defer></script>
 </head>
 <body>
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">Shiny Maker</div>
-    <button class="menu-toggle" id="menuToggle">☰</button>
-    <nav class="nav-links" id="navLinks">
-      <a href="#hero" class="nav-link"><i class="fas fa-home"></i>Inicio</a>
-      <a href="#about" class="nav-link"><i class="fas fa-user"></i>Sobre mí</a>
-      <a href="#services" class="nav-link"><i class="fas fa-cogs"></i>Servicios</a>
-      <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i>Contacto</a>
-    </nav>
+  <nav>
+    <div class="nav-container">
+      <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#beneficios">Ventajas</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <img src="assets/gatos-inicio.png" alt="Gatitos robóticos" class="hero-image">
+    <div class="hero-text">
+      <h1>Creamos experiencias digitales que impulsan tu negocio</h1>
+      <p>Sitios web modernos, plataformas escalables y apps móviles funcionales.</p>
+      <a href="#contacto" class="btn-primary">Solicita una cotización</a>
+    </div>
   </header>
-  <!-- Main content -->
-  <main>
-    <!-- Hero -->
-    <section id="hero" class="hero">
-      <div class="hero-inner">
-      <p>Somos Shiny Maker: creadores de software personalizado. Nos apasiona transformar ideas en soluciones digitales intuitivas y funcionales.</p>
-      <p>Con experiencia en desarrollo web y diseño de interfaces, creamos productos que combinan estética y eficiencia. </p>
-      <button class="cta-button" id="openQuoteForm">Solicitar presupuesto</button>
-      <h2 id="typewriter" class="typewriter">Tecnología Avanzada que Impulsa el Futuro</h2>
-    </section>
 
-        <!-- Sobre mí -->
-    <section id="about" class="page-section fade-slide">
-      <h1>Sobre nosotros</h1>
-      <p class="intro">Experimenta rapidez, precisión y un rendimiento inigualable en cada detalle que transforma tu día a día.</p>
-      <div class="about-content">
-        <div class="about-text slide-in-left hidden">
-          <p>
-            Descubre el futuro de la tecnología con productos que no solo cumplen con tus expectativas, sino que las superan.
-            Cada proyecto es una oportunidad para construir algo único, útil y escalable.
-          </p>
-        </div>
-        <div class="about-img slide-in-right hidden">
-          <img src="../assets/image2.jpg" alt="Shiny Maker creando software" />
-        </div>
-      </div>
-    </section>
+<div class="parallax-group">
 
-    <section class="proceso-trabajo">
-  <h2>Nuestro Proceso de Trabajo</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-number">1</div>
-      <div class="timeline-content">
-        <h3>Reunión Inicial</h3>
-        <p>Entendemos tus necesidades y objetivos para definir el alcance del proyecto.</p>
-      </div>
+  <section id="servicios" class="servicios-section">
+  <h2 class="section-title">¿Qué hacemos?</h2>
+  <div class="servicios-grid">
+    <div class="servicio-card">
+      <div class="servicio-icon">🌐</div>
+      <h3>Sitios Web Profesionales</h3>
+      <p>Landing pages, sitios institucionales, tiendas online, blogs y más. Rápidos, seguros y a tu medida.</p>
     </div>
-    <div class="timeline-item">
-      <div class="timeline-number">2</div>
-      <div class="timeline-content">
-        <h3>Planificación y Diseño</h3>
-        <p>Diseñamos la arquitectura y la interfaz de usuario enfocándonos en la experiencia óptima.</p>
-      </div>
+    <div class="servicio-card">
+      <div class="servicio-icon">🧩</div>
+      <h3>Plataformas Web a Medida</h3>
+      <p>Desde SaaS hasta dashboards internos. Creamos soluciones personalizadas que escalan con tu negocio.</p>
     </div>
-    <div class="timeline-item">
-      <div class="timeline-number">3</div>
-      <div class="timeline-content">
-        <h3>Desarrollo</h3>
-        <p>Construimos la solución utilizando tecnologías modernas y buenas prácticas de programación.</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-number">4</div>
-      <div class="timeline-content">
-        <h3>Pruebas y Calidad</h3>
-        <p>Realizamos pruebas exhaustivas para garantizar un software robusto y sin errores.</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-number">5</div>
-      <div class="timeline-content">
-        <h3>Implementación</h3>
-        <p>Desplegamos el software en el entorno productivo y aseguramos su correcto funcionamiento.</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-number">6</div>
-      <div class="timeline-content">
-        <h3>Mantenimiento y Soporte</h3>
-        <p>Ofrecemos soporte continuo para mantener y actualizar tu software según sea necesario.</p>
-      </div>
+    <div class="servicio-card">
+      <div class="servicio-icon">📱</div>
+      <h3>Apps Móviles</h3>
+      <p>Apps para iOS, Android e híbridas usando tecnologías modernas como Flutter y React Native.</p>
     </div>
   </div>
 </section>
 
 
-    <!-- Servicios -->
-    <section id="services" class="page-section fade-slide">
-      <h1>Servicios</h1>
-      <p class="intro">Ofrecemos soluciones que se adaptan a tus necesidades y a las de tus clientes.</p>
-      <div class="services-grid">
-        <div class="service-card">
-          <img src="assets/image2.jpg" alt="Shiny Maker creando software" />
-          <h2>Aplicaciones moviles</h2>
-          <p>Diseñamos y desarrollamos aplicaciones móviles que funcionan en iOS y Android, brindando una experiencia de usuario fluida y atractiva.</p>
-        </div>
-        <div class="service-card">
-          <img src="assets/image2.jpg" alt="Shiny Maker creando software" />
-          <h2>Sitios Web Responsivos</h2>
-          <p>Diseño moderno adaptable a todos los dispositivos.</p>
-        </div>
-        <div class="service-card">
-          <img src="assets/image2.jpg" alt="Shiny Maker creando software" />
-          <h2>Automatización</h2>
-          <p>Flujos que ahorran tiempo y mejoran procesos.</p>
-        </div>
+<section id="beneficios" class="beneficios-section">
+  <h2 class="section-title">¿Por qué elegirnos?</h2>
+  <div class="beneficios-grid">
+    <div class="beneficios-info">
+      <div class="benefit-card">
+        <h3>✅ Diseños Personalizados</h3>
+        <p>Cada proyecto es único. Creamos experiencias visuales que se ajustan a tu marca, sin plantillas prehechas.</p>
       </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contact" class="page-section fade-slide">
-      <h1>Contacto</h1>
-      <p class="intro">¿Quieres que trabajemos juntos? Ingresa tus datos y nos pondremos en contacto contigo en breve. Esperamos tener noticias tuyas pronto.</p>
-      <form class="contact-form" id="contactForm">
-        <div class="form-group">
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Correo electrónico</label>
-          <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required />
-        </div>
-        <div class="form-group">
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos tu idea o pregunta" required></textarea>
-        </div>
-        <button type="submit" class="cta-button">Enviar mensaje</button>
-        <div id="formResponse" class="form-response"></div>
-      </form>
-    </section>
-  </main>
-
-  <!-- Footer -->
-   <footer class="footer">
-  <div class="footer-content">
-    <p>© 2025 <strong>Shiny Maker</strong> — Todos los derechos reservados</p>
-    <a href="mailto:contacto@shinymaker.com" class="email-link" aria-label="Enviar correo">
-      ✉️ contacto@shinymaker.com
-    </a>
-  </div>
-</footer>
-
-  <!-- Modal presupuesto -->
-<div class="modal" id="quoteModal">
-  <div class="modal-content">
-    <button class="close-button" id="closeModal">&times;</button>
-    <h2>Solicita tu presupuesto</h2>
-    <form id="quoteForm">
-      <label for="quoteNombre">Nombre completo</label>
-      <input type="text" id="quoteNombre" name="nombre" placeholder="Escribe tu nombre completo" required>
-
-      <label for="quoteEmail">Correo electrónico</label>
-      <input type="email" id="quoteEmail" name="email" placeholder="ejemplo@correo.com" required>
-
-      <label for="proyecto">¿Qué necesitas desarrollar?</label>
-      <textarea id="proyecto" name="proyecto" placeholder="Cuéntanos tu idea" required></textarea>
-
-      <button type="submit" class="cta-button">Enviar solicitud</button>
-      <div id="formMessage" class="form-response"></div>
-    </form>
-  </div>
+      <div class="benefit-card">
+        <h3>🚀 Entregas Ágiles</h3>
+        <p>Metodologías eficientes para lanzarte al mercado en tiempo récord, sin sacrificar calidad.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>💬 Comunicación Clara</h3>
+        <p>Trabajamos contigo de principio a fin. Sin tecnicismos ni sorpresas.</p>
+      </div>
+    </div>
 </div>
+</section>
 
-  <!-- JS -->
-  <script src="js/main.js"></script>
+  <section id="proceso">
+    <h2 class="section-title">Nuestro proceso</h2>
+    <div class="process">
+      <div><strong>1.</strong> Escuchamos tu idea</div>
+      <div><strong>2.</strong> Diseñamos tu solución</div>
+      <div><strong>3.</strong> La desarrollamos contigo</div>
+      <div><strong>4.</strong> Te acompañamos en el lanzamiento</div>
+    </div>
+  </section>
+
+<section id="faq">
+  <h2 class="section-title">Preguntas Frecuentes</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <button class="faq-question">¿Cuánto cuesta una página web?</button>
+      <div class="faq-answer">
+        <p>Dependiendo del tipo de sitio, desde $4,000 MXN. Cotizamos sin compromiso.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">¿Cuánto tarda el desarrollo?</button>
+      <div class="faq-answer">
+        <p>De 2 a 6 semanas según la complejidad del proyecto.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">¿Qué necesito para empezar?</button>
+      <div class="faq-answer">
+        <p>Una idea clara o un problema que resolver. Nosotros te guiamos.</p>
+      </div>
+    </div>
+
+</section>
+
+<section id="contacto" class="contacto-section">
+  <h2 class="section-title">¿Listo para comenzar?</h2>
+  <div class="contacto-contenido">
+    <p>Estamos listos para ayudarte a construir tu próxima solución digital.</p>
+    <a href="mailto:contacto@shinymaker.com" class="btn-primary">Contáctanos</a>
+  </div>
+  </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Shiny Maker · Hecho con 💻 desde México</p>
+  </footer>
 </body>
 </html>
-
-
-
